@@ -1,4 +1,14 @@
 import streamlit as st
+from PyPDF2 import PdfReader
+
+
+def get_pdf(pdf_docs):
+    text = ""
+    for pdf in pdf_docs:
+        pdf_reader = PdfReader(pdf)
+        for pages in pdf_reader.pages:
+            text += pages.extract_text()
+    return text
 
 
 def main():
@@ -10,7 +20,10 @@ def main():
         st.subheader("Your documents")
         pdf_docs = st.file_uploader("Upload your documents", accept_multiple_files=True)
         if st.button("Process"):
-            # get the pdx 
+            with st.spinner("Processing"):
+                # get the pdx 
+                raw_text = get_pdf_text(pdf_docs)
+
 
             # get the text chunks 
 
