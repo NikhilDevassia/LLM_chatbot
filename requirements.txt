@@ -1,0 +1,9 @@
+pandas 
+matplotlib
+transformers
+langchain
+streamlit
+pypdf2 # read pdf
+faiss-cpu
+openai
+huggingface-hub
