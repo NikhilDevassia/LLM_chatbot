@@ -7,3 +7,6 @@ pypdf2 # read pdf
 faiss-cpu
 openai
 huggingface-hub
+
+InstructorEmbedding 
+sentence_transformers
