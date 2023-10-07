@@ -1,5 +1,6 @@
 pandas 
 matplotlib
+python-dotenv
 transformers
 langchain
 streamlit
